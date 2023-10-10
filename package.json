@@ -1,0 +1,25 @@
+{
+  "name": "coolcamp",
+  "version": "1.0.0",
+  "description": "Coolcamp is a website that allows users to make reservations at any campsite across the nation.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andoniank/Coolcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andoniank/Coolcamp/issues"
+  },
+  "homepage": "https://github.com/Andoniank/Coolcamp#readme",
+  "engines": {
+    "node": "16.x"
+  }
+}

@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: coolcamp_production
-  username: coolcamp
-  password: <%= ENV["COOLCAMP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
