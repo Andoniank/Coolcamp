@@ -4,6 +4,7 @@ import LoginFormPage from './components/LoginformPage'
 import SignupFormPage from "./components/SignupFormPage"
 import Navigation from "./components/Navigation";
 
+
 function App() {
   return (
     <>
@@ -17,7 +18,6 @@ function App() {
         </Route>
       </Switch>
     </>
-    
   );
 }
 
