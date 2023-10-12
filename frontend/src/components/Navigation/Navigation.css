@@ -2,13 +2,14 @@
     position: fixed;
     top: 0;
     width: 63%;
-    background-color: rgb(245, 240, 227) ;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(245, 241, 232);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 18%;
-    margin-right: 18%;
     z-index: 2;
+    margin: 0;
 }
 
 
