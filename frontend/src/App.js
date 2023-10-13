@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch} from 'react-router-dom'
-import LoginFormPage from './components/LoginformPage'
-import SignupFormPage from "./components/SignupFormPage"
+import CampsiteIndex from "./components/CampsitesIndex/CampsiteIndex";
+import CampsiteShow from "./components/CampsiteShow/CampsiteShow";
 import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
 
@@ -11,11 +11,11 @@ function App() {
     <>
       <Navigation />
       <Switch>
-        <Route path='/login'>
-          <LoginFormPage />
+        <Route path='/campsites/:campsiteId'>
+          <CampsiteShow />
         </Route>
-        <Route path='/signup'>
-          <SignupFormPage />
+        <Route path='/campsites'>
+          <CampsiteIndex />
         </Route>
         <Route path='/'>
           <HomePage />
