@@ -78,8 +78,8 @@ export const updateReservation = (reservation) => async (dispatch) => {
         })
     })
     if (res.ok) {
-        const updatedReservation = await res.json()
-        dispatch(recieveReservation(updatedReservation))
+        const data = await res.json()
+        dispatch(recieveReservation(data.reservation))
     }
 }
 

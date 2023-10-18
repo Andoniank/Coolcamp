@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'faker'
+require 'open-uri'
 
 ApplicationRecord.transaction do 
     Faker::UniqueGenerator.clear

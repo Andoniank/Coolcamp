@@ -43,7 +43,7 @@ const CampsiteIndex = () => {
             <div className='campsite-index'>
                 {filteredCampsites.map((campsite) => {
                     return (
-                        <NavLink to={`/campsites/${campsite.id}`} className='campsite-link'>
+                        <NavLink to={`/campsites/${campsite.id}`} key={campsite.id} className='campsite-link'>
                             <div className='campsite'>
                                 <img className='campsite-img' src={campsitedemo} alt="" />
                                 <h3 className='campsite-name'>{campsite.name}</h3>
