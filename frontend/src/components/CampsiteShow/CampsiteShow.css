@@ -58,7 +58,7 @@
 }
 
 .show-details {
-    width: 50%;
+    width: 65%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -71,4 +71,23 @@
 
 .show-description {
     padding-top: 4%;
+}
+
+.details-reservaitons-container {
+    display: flex;
+     
+}
+
+.show-reservations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }

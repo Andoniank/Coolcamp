@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { NavLink } from "react-router-dom";
+import './Navigation.css'
+import catsmiling from '../../assets/catsmiling.jpg'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   
-  const openMenu = () => {
-    if (showMenu) return;
-    setShowMenu(true);
-  };
   
   useEffect(() => {
     if (!showMenu) return;
@@ -30,18 +29,15 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fa-solid fa-user-circle" />
-      </button>
-      {showMenu && (
-        <ul className="profile-dropdown">
-          <li>{user.email}</li>
-          <li>{user.firstName} {user.lastName}</li>
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
-        </ul>
-      )}
+      <div className="navlinks">
+        <p className='nav-button'>Trips</p>
+        <p className='nav-button'>Lists</p>
+        <p className='nav-button'>Inbox</p>
+        <button className='sign-up-button' onClick={logout}>Log Out</button>
+        <NavLink to='/profile' title='Profile Page'><img className="nav-profile-image" src={catsmiling} alt='Profile Page'></img></NavLink>
+          
+      </div>
+      
     </>
   );
 }

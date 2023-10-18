@@ -3,6 +3,7 @@ import './CampsiteShow.css'
 import { useEffect } from 'react'
 import { fetchCampsite } from '../../store/campsites'
 import { useParams } from 'react-router-dom'
+import Reservations from '../Reservations/Reservations'
 import campsitedemo2 from '../../assets/campsitedemo2.jpg'
 import heart from '../../assets/heart.png'
 
@@ -10,12 +11,13 @@ const CampsiteShow = () => {
     const {campsiteId} = useParams()
     const campsite = useSelector(state => (state.campsites[campsiteId]))
     const dispatch = useDispatch()
-
+    
     useEffect(() => {
         dispatch(fetchCampsite(campsiteId))
     }, [campsiteId, dispatch]) 
-
+    
     if(!campsite) return null
+    
 
     return (
         <div className='campsite-show'>
@@ -27,11 +29,17 @@ const CampsiteShow = () => {
             <div className='show-img-div'>
                 <img className='show-img' src={campsitedemo2} alt="" />
             </div>
-            <div className='show-details'>
-                <h2>{campsite.acres} acres hosted by John Doe</h2>
-                <p className='includes'>{campsite.lodging ? 'Lodging ·' : ''} {campsite.rv? 'RVs ·' : ''} {campsite.tents ? 'Tents' : ''}</p>
-                <p className='show-description'>{campsite.description}</p>
+            <div className='details-reservaitons-container'>
+                <div className='show-details'>
+                    <h2>{campsite.acres} acres hosted by John Doe</h2>
+                    <p className='includes'>{campsite.lodging ? 'Lodging ·' : ''} {campsite.rv? 'RVs ·' : ''} {campsite.tents ? 'Tents' : ''}</p>
+                    <p className='show-description'>{campsite.description}</p>
+                </div>
+                <div className='show-reservations'>
+                    <Reservations />
+                </div>
             </div>
+                
             <div className='activities-features'>
                 <h2>Activities</h2>
                     <ul>

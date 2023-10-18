@@ -55,5 +55,13 @@ ApplicationRecord.transaction do
       )
     end
 
+    puts "Creating Reservations..."
+    Reservation.create!(
+      start_date: 2.days.from_now,
+      end_date: 5.days.from_now,
+      user_id: 2,
+      campsite_id: 5
+    )
+
     puts "Done!"
   end

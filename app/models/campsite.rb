@@ -28,4 +28,10 @@ class Campsite < ApplicationRecord
     validates :rv, inclusion: {in: [true, false]}
     validates :tents, inclusion: {in: [true, false]}
     validates :description, presence: true
+
+
+    has_many :reservations,
+        foreign_key: :campsite_id,
+        class_name: :Reservation,
+        dependent: :destroy
 end

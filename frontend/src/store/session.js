@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf.js";
+import { recieveReservations } from "./reservations.js";
 
 const SET_CURRENT_USER = 'session/setCurrentUser';
 const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
@@ -30,6 +31,7 @@ export const login = ({ credential, password }) => async dispatch => {
   const data = await response.json();
   storeCurrentUser(data.user);
   dispatch(setCurrentUser(data.user));
+  dispatch(recieveReservations(data.reservations))
   return response;
 };
 
@@ -39,6 +41,9 @@ export const restoreSession = () => async dispatch => {
   const data = await response.json();
   storeCurrentUser(data.user);
   dispatch(setCurrentUser(data.user));
+  if (data.user) {
+    dispatch(recieveReservations(data.reservations))
+  }
   return response;
 };
 
