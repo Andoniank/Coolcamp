@@ -102,7 +102,7 @@ const reservationReducer = (state = {}, action) => {
     const nextState = Object.assign({}, Object.freeze(state))
     switch (action.type) {
         case RECIEVE_RESERVATIONS:
-            return action.reservations
+            return action.reservations || state
         case RECIEVE_RESERVATION:
             nextState[action.reservation.id] = action.reservation
             return nextState
