@@ -45,7 +45,8 @@ const CampsiteIndex = () => {
                     return (
                         <NavLink to={`/campsites/${campsite.id}`} key={campsite.id} className='campsite-link'>
                             <div className='campsite'>
-                                <img className='campsite-img' src={campsitedemo} alt="" />
+                                {console.log(campsite.photoUrl)}
+                                <img className='campsite-img' src={campsite.photoUrl} alt="" />
                                 <h3 className='campsite-name'>{campsite.name}</h3>
                                 <div className='campsite-details'> 
                                     <div className='campsite-L1'>

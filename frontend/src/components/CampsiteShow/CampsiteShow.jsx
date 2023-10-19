@@ -27,7 +27,7 @@ const CampsiteShow = () => {
                 <button className='save'><img className='save-icon' src={heart} alt="" />Save</button>
             </div>
             <div className='show-img-div'>
-                <img className='show-img' src={campsitedemo2} alt="" />
+                <img className='show-img' src={campsite.photoUrl} alt="" />
             </div>
             <div className='details-reservaitons-container'>
                 <div className='show-details'>

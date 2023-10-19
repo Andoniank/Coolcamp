@@ -9,6 +9,7 @@ import './Reservations.css'
 const Reservations = () => {
     const {campsiteId} = useParams()
     const sessionUser = useSelector(state => state.session.user)
+    
     const [startDate, setStartDate] = useState()
     const [endDate, setEndDate] = useState()
     const [showModal, setShowModal] = useState(false)

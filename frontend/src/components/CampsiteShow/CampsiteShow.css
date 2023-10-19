@@ -7,7 +7,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 18%;
-    padding-right: 18%;
+    padding-right: 19%;
     background-color: rgb(255, 255, 255);
 }
 
@@ -51,7 +51,7 @@
 }
 
 .show-img {
-    display: block;
+    display: flex;
     width: 100%;
     height: 30%;
     border-radius: 15px;
@@ -75,6 +75,8 @@
 
 .details-reservaitons-container {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
      
 }
 
@@ -82,12 +84,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 25%;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     padding: 2%;
     margin-top: 3%;
-    margin-left: 5%;
     margin-bottom: 3%;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
