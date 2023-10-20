@@ -3,8 +3,9 @@
 }
 
 .intro-sign-up {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
+
 
 .input-label-sign-up {
     display: flex;
@@ -46,4 +47,14 @@
 
 .sign-up:hover {
     background-color: #a04227;
+}
+
+.errors {
+    color: red;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.errors-div {
+    margin-bottom: 35px;
 }

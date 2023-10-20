@@ -6,6 +6,7 @@ import SignupFormPage from '../SignupFormPage';
 import { Modal } from '../../context/Modal'
 import ProfileButton from './ProfileButton';
 import coolcamp from '../../assets/coolcamp.png'
+import coolcamplogo from '../../assets/Coolcamp-logos_transparent.png'
 import './Navigation.css';
 
 
@@ -44,7 +45,9 @@ function Navigation() {
 
   return (
       <div className='navbar'>
-        <NavLink exact to="/" className='home-button'><img className='logo' src={coolcamp} alt="HomePage"/></NavLink>
+        <div className='left-nav'>
+          <NavLink exact to="/" className='home-button'><img className='logo' src={coolcamplogo} alt="HomePage"/></NavLink>
+        </div>
         {sessionLinks}
       </div>
   );

@@ -5,6 +5,7 @@ import * as reservationActions from '../../store/reservations'
 import { Modal } from "../../context/Modal"
 import LoginFormPage from "../LoginformPage"
 import './Reservations.css'
+import success from '../../assets/success.png'
 
 const Reservations = () => {
     const {campsiteId} = useParams()
@@ -12,7 +13,8 @@ const Reservations = () => {
     const campsite = useSelector(state => (state.campsites[campsiteId]))
     const [startDate, setStartDate] = useState()
     const [endDate, setEndDate] = useState()
-    const [showModal, setShowModal] = useState(false)
+    const [showLoginModal, setShowLoginModal] = useState(false)
+    const [showSuccessModal, setShowSuccessModal] = useState(false)
     const dispatch = useDispatch()
     
     const ratesCalc = () => {
@@ -26,9 +28,10 @@ const Reservations = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(!sessionUser) {
-            setShowModal(true)
+            setShowLoginModal(true)
         } else {
             const userId = sessionUser.id
+            setShowSuccessModal(true)
             return dispatch(reservationActions.createReservation({startDate, endDate, userId, campsiteId}))
         }
         
@@ -52,9 +55,17 @@ const Reservations = () => {
                 <div className="total-with-guests"><p>{campsite.maxGuests} guests</p><p>${ratesCalc()}.00</p></div>
                 <div className="service"><p>Service Fee</p><p>$25.00</p></div>
                 <div className="total"><p>Total</p><p>${ratesPlusService()}.00</p></div>
-                {showModal && (
-                <Modal onClose={() => setShowModal(false)}>
+                {showLoginModal && (
+                <Modal onClose={() => setShowLoginModal(false)}>
                     <LoginFormPage />
+                </Modal>
+                )}
+                {showSuccessModal && (
+                <Modal onClose={() => setShowSuccessModal(false)}>
+                    <div className="success-modal">
+                        <img className="success-img" src={success} alt="" />
+                        <p className="success">Happy Camping!</p>
+                    </div>
                 </Modal>
                 )}
             </div>
