@@ -27,7 +27,7 @@ export const removeReservation = reservationId => {
     }
 }
 
-//t-------------------Thunk Action Creators------------------//
+//-------------------Thunk Action Creators------------------//
 
 export const fetchReservations = () => async (dispatch) => {
     const res = await csrfFetch('/api/reservations')
@@ -55,11 +55,9 @@ export const createReservation = (reservation) => async (dispatch) => {
             campsite_id
         })
     })
-    console.log(res)
     if(res.ok) {
-        const newReservation = await res.json()
-        dispatch(recieveReservation(newReservation.reservation))
-        return newReservation
+        const data = await res.json()
+        dispatch(recieveReservation(data.reservation))
     }
 }
 
