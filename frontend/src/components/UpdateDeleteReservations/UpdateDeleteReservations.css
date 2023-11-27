@@ -3,7 +3,8 @@
     padding: 5%;
     width: 100%;
     margin-bottom: 5%;
-    background-color: rgb(253, 247, 235);
+    background-color: rgb(253, 247, 237);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .date-inputs input {

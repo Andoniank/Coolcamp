@@ -41,9 +41,9 @@ function LoginFormPage() {
       <h1 className='log-in-title'>Log in to Continue</h1>
       <p className='intro'>Welcome back! Lets get you outside.</p>
         <form className='log-in-form' onSubmit={handleSubmit}>
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
+        <div className="errors-div">
+          {errors.map(error => <p className="errors" key={error}>{error}</p>)}
+        </div>  
           <label className="input-label">
             {/* if the credential is the default placeholder of 'Email address', it will first change the value field will initally be empty */}
             {/* although the value field is empty, in place of the value field we will have the span */}

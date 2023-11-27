@@ -35,5 +35,10 @@ class Campsite < ApplicationRecord
         class_name: :Reservation,
         dependent: :destroy
 
+    has_many :reviews,
+        foreign_key: :campsite_id,
+        class_name: :Review,
+        dependent: :destroy
+
     has_one_attached :photo
 end

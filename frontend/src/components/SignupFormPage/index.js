@@ -44,12 +44,13 @@ function SignupFormPage() {
       <h1 className="sign-up-title">Sign Up to Continue</h1>
       <p className="intro-sign-up">Join our community of nature lovers!</p>
       <form className="sign-up-form" onSubmit={handleSubmit}>
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
-        </ul>
+        <div className="errors-div">
+          {errors.map(error => <p className="errors" key={error}>{error}</p>)}
+        </div>  
         <label className="input-label-sign-up">
           <span className={`placeholder ${email === 'Email address' ? '' : 'floating'}`}>Email Address</span>
           <input
+            className="email"
             type="text"
             value={email === 'Email address' ? '' : email}
             onChange={(e) => setEmail(e.target.value)}

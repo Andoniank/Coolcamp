@@ -1,4 +1,5 @@
-import csrfFetch from "./csrf";
+import csrfFetch from "./csrf"
+import { recieveReviews } from "./reviews"
 
 const RECIEVE_CAMPSITES = 'campsites/recieveCampsites'
 const RECIEVE_CAMPSITE = 'campsites/recieveCampsite'
@@ -29,8 +30,9 @@ export const fetchCampsites = () => async (dispatch) => {
 
 export const fetchCampsite = (campsiteId) => async (dispatch) => {
     const res = await csrfFetch(`/api/campsites/${campsiteId}`)
-    const campsite = await res.json()
-    dispatch(recieveCampsite(campsite))
+    const data = await res.json()
+    dispatch(recieveCampsite(data.campsite))
+    dispatch(recieveReviews(data.reviews))
 }
 
 //--------------------Reducer-------------------------------//

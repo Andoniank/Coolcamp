@@ -5,6 +5,7 @@ import CampsiteShow from "./components/CampsiteShow/CampsiteShow";
 import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
 import UserProfile from "./components/UserProfile/UserProfile";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }

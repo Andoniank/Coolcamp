@@ -39,6 +39,27 @@
     margin-top: 10px;
 }
 
+.to-index {
+    width: 30%;
+    height: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.to-index-button {
+    background-color: #c74f2d;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 4%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.to-index-button:hover {
+    background-color: #8b3820;
+}
+
+
 .image-container {
     position: relative;
     margin-top: 100px;

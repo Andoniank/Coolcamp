@@ -1,0 +1,7 @@
+export {default as campfire } from './firewood.png'
+export {default as cooking } from './cooking.png'
+export {default as pets } from './pet.png'
+export {default as trash } from './recycle-bin.png'
+export {default as shower } from './shower.png'
+export {default as toilet } from './toilet-paper.png'
+export {default as wifi} from './wifi.png'
