@@ -18,9 +18,9 @@ const HomePage = () => {
                     <img className='camping-image' src={camping} alt=""></img>
                     <div className='search-form'>
                         <form>
-                            <input type='text' />
+                            <input type='text' placeholder='Search destinations' />
                             <input type='date' />
-                            <input type='text' />
+                            <input type='text' placeholder='Add guests'/>
                             <input type='submit' value='Search'/>
                         </form>
                     </div>
