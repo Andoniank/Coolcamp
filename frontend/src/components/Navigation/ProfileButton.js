@@ -30,14 +30,9 @@ function ProfileButton({ user }) {
   return (
     <>
       <div className="navlinks">
-        <p className='nav-button'>Trips</p>
-        <p className='nav-button'>Lists</p>
-        <p className='nav-button'>Inbox</p>
         <button className='sign-up-button' onClick={logout}>Log Out</button>
         <NavLink to='/profile' title='Profile Page'><img className="nav-profile-image" src={catsmiling} alt='Profile Page'></img></NavLink>
-          
       </div>
-      
     </>
   );
 }
