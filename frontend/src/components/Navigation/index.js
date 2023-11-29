@@ -23,10 +23,6 @@ function Navigation() {
   } else {
     sessionLinks = (
       <div className='navlinks'>
-        <p className='nav-button'>Near Me</p>
-        <p className='nav-button'>About</p>
-        <p className='nav-button'>Earn CoolCash</p>
-        <p className='nav-button'>Start Hosting</p>
           <button className='nav-button' onClick={() => setShowLoginModal(true)}>Log In</button>
           {showLoginModal && (
           <Modal onClose={() => setShowLoginModal(false)}>
