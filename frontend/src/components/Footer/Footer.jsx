@@ -15,7 +15,6 @@ const Footer = () => {
                 <p className='footer2'>the pictures displayed in this project do not belong to me</p>
             </div>
         </div>
-        
     )
 }
 
